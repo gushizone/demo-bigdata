@@ -24,33 +24,13 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.version}</artifactId>
             <version>${spark.version}</version>
-            <!--<exclusions>-->
-            <!--    <exclusion>-->
-            <!--        <artifactId>netty-all</artifactId>-->
-            <!--        <groupId>io.netty</groupId>-->
-            <!--    </exclusion>-->
-            <!--</exclusions>-->
         </dependency>
 
-        <!--<dependency>-->
-        <!--    <groupId>org.apache.spark</groupId>-->
-        <!--    <artifactId>spark-streaming_${scala.version}</artifactId>-->
-        <!--    <version>${spark.version}</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--    <groupId>org.apache.hadoop</groupId>-->
-        <!--    <artifactId>hadoop-common</artifactId>-->
-        <!--    <version>${hadoop.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--    <groupId>org.apache.hadoop</groupId>-->
-        <!--    <artifactId>hadoop-mapreduce-client-core</artifactId>-->
-        <!--    <version>${hadoop.version}</version>-->
-        <!--</dependency>-->
-
-
-
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>redis.clients</groupId>
@@ -58,16 +38,5 @@
             <version>2.9.0</version>
         </dependency>
     </dependencies>
-
-
-    <!--<dependencyManagement>-->
-    <!--    <dependencies>-->
-    <!--        <dependency>-->
-    <!--            <artifactId>netty-all</artifactId>-->
-    <!--            <groupId>io.netty</groupId>-->
-    <!--            <version>4.1.58.Final</version>-->
-    <!--        </dependency>-->
-    <!--    </dependencies>-->
-    <!--</dependencyManagement>-->
 
 </project>
