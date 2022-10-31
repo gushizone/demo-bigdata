@@ -6,7 +6,7 @@ object SparkHelper {
 
   var sparkSession: SparkSession = SparkSession.builder()
     .appName("Spark-SQL")
-    .master("local[1]")
+    .master("local[2]")
     .getOrCreate()
 
   var resourcesPaths: ResourcesPaths = new ResourcesPaths
