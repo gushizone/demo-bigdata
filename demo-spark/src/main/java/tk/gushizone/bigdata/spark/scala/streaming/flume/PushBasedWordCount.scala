@@ -10,13 +10,20 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
  */
 object PushBasedWordCount {
 
+  /**
+   * 1. spark-submit 本类
+   * 2. 启动 flume
+   * 3. echo
+   *
+   * echo "Spark Streaming + Flume" >> /tmp/log.txt
+   */
   def main(args: Array[String]): Unit = {
 
     val sparkConf = new SparkConf()
     val ssc = new StreamingContext(sparkConf, Seconds(5))
 
     // 1.获取输入流
-    val flumeStream = FlumeUtils.createStream(ssc, "hadoop001", 8888)
+    val flumeStream = FlumeUtils.createStream(ssc, "127.0.0.1", 8888)
 
     // 2.打印输入流的数据
     flumeStream.map(line => new String(line.event.getBody.array()).trim).print()

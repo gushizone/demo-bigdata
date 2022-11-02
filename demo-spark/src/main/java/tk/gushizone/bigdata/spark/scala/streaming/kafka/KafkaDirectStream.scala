@@ -24,7 +24,7 @@ object KafkaDirectStream {
        * 指定broker的地址清单，清单里不需要包含所有的broker地址，生产者会从给定的broker里查找其他broker的信息。
        * 不过建议至少提供两个broker的信息作为容错。
        */
-      "bootstrap.servers" -> "hadoop001:9092",
+      "bootstrap.servers" -> "127.0.0.1:9092",
       /*键的序列化器*/
       "key.deserializer" -> classOf[StringDeserializer],
       /*值的序列化器*/
