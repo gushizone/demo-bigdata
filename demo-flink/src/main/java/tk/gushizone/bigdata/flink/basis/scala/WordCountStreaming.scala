@@ -16,8 +16,6 @@ object WordCountStreaming {
   def main(args: Array[String]): Unit = {
 
     val senv = StreamExecutionEnvironment.getExecutionEnvironment
-
-
     val dataStream: DataStream[String] = senv.socketTextStream("127.0.0.1", 9999, '\n')
     dataStream.flatMap { line => line.toLowerCase.split(",") }
               .filter(_.nonEmpty)
