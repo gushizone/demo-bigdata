@@ -33,6 +33,9 @@ class ConsoleLog extends Log {
     }
 }
 
-class SocketLog extends Log with SecurityLog {
+/**
+ * 特征允许多继承 (可以多次使用 with)
+ */
+class SocketLog extends Log with SecurityLog{
 
 }
